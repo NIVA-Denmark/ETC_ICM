@@ -134,38 +134,6 @@ ContaminationRatio<- function(threshold, status, response=1){
     return(cr)
 }
 
-#===============================================================================
-#Function CHASEStatus
-CHASEStatus<-function(CRsum){
-  status<-ifelse(CRsum>0.5, "Good", "High")
-  status<-ifelse(CRsum>1, "Moderate", status)
-  status<-ifelse(CRsum>5, "Poor", status)
-  status<-ifelse(CRsum>10, "Bad",status )
-  return(status)
-}
-
-AddColours<-function(CRsum){
-  co<-ifelse(CRsum>0.5, '#66FF66', '#3399FF')
-  co<-ifelse(CRsum>1, '#FFFF66', co)
-  co<-ifelse(CRsum>5, '#FF9933', co)
-  co<-ifelse(CRsum>10, '#FF6600',co)
-  return(co)
-}
-
-
-#===============================================================================
-# function Threshold
-Threshold <- function(substance){
-  substances<- read.csv('./data/substances.csv', header = TRUE,  sep=";")
-  return(value)
-}
-
-
-#===============================================================================
-#Function Contamination sum
-ContaminationSum <- function(ratiolist){
-  
-}
 
 
 
